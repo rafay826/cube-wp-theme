@@ -1,0 +1,805 @@
+@charset "UTF-8";
+/*
+Theme Name: Fywave
+Theme URI: http://beverlyhillsdigitalmarketing.com http://fywave.com
+Author: Rafay Choudhury
+Author URI: http://beverlyhillsdigitalmarketing.com http://fywave.com
+Description: A theme skeleton hooked in with all of the appropriate calls for angular, jquery, mobile, nav, animation, and bare bones structure to streamline theme development.
+Version: 1
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: black, green, white, light, dark, two-columns, three-columns, left-sidebar, right-sidebar, fixed-layout, responsive-layout, custom-background, custom-header, custom-menu, editor-style, featured-images, flexible-header, full-width-template, microformats, post-formats, rtl-language-support, sticky-post, theme-options, translation-ready, accessibility-ready
+Text Domain: Fywave Breadkit Skeleton Theme
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+/* Bitters 0.10.0
+ * http://bitters.bourbon.io
+ * Copyright 2013–2014 thoughtbot, inc.
+ * MIT License */
+/* Neat 1.7.0
+ * http://neat.bourbon.io
+ * Copyright 2012-2014 thoughtbot, inc.
+ * MIT License */
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit; }
+
+/* Bitters 0.10.0
+ * http://bitters.bourbon.io
+ * Copyright 2013–2014 thoughtbot, inc.
+ * MIT License */
+button,
+input[type="submit"] {
+  -webkit-font-smoothing: antialiased;
+  background-color: #477DCA;
+  border-radius: 3px;
+  color: white;
+  display: inline-block;
+  font-size: 1em;
+  font-weight: bold;
+  line-height: 1;
+  padding: 0.75em 1em;
+  text-decoration: none; }
+  button:hover,
+  input[type="submit"]:hover {
+    background-color: #2c5999;
+    color: white; }
+  button:disabled,
+  input[type="submit"]:disabled {
+    cursor: not-allowed;
+    opacity: 0.5; }
+
+body {
+  -webkit-font-smoothing: antialiased;
+  background-color: white;
+  color: #333;
+  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-size: 1em;
+  line-height: 1.5; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  line-height: 1.25;
+  margin: 0;
+  text-rendering: optimizeLegibility; }
+
+h1 {
+  font-size: 2.25em; }
+
+h2 {
+  font-size: 2em; }
+
+h3 {
+  font-size: 1.75em; }
+
+h4 {
+  font-size: 1.5em; }
+
+h5 {
+  font-size: 1.25em; }
+
+h6 {
+  font-size: 1em; }
+
+p {
+  margin: 0 0 0.75em; }
+
+a {
+  -webkit-transition: color 0.1s linear;
+  -moz-transition: color 0.1s linear;
+  transition: color 0.1s linear;
+  color: #477DCA;
+  text-decoration: none; }
+  a:hover {
+    color: #2c5999; }
+  a:active, a:focus {
+    color: #2c5999;
+    outline: none; }
+
+hr {
+  border-bottom: 1px solid #DDD;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  margin: 1.5em 0; }
+
+img,
+picture {
+  margin: 0;
+  max-width: 100%; }
+
+blockquote {
+  border-left: 2px solid #DDD;
+  color: #595959;
+  margin: 1.5em 0;
+  padding-left: 0.75em; }
+
+cite {
+  color: #737373;
+  font-style: italic; }
+  cite:before {
+    content: "\2014 \00A0"; }
+
+fieldset {
+  background: #f7f7f7;
+  border: 1px solid #DDD;
+  margin: 0 0 0.75em 0;
+  padding: 1.5em; }
+
+input,
+label,
+select {
+  display: block;
+  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-size: 1em; }
+
+label {
+  font-weight: bold;
+  margin-bottom: 0.375em; }
+  label.required:after {
+    content: "*"; }
+  label abbr {
+    display: none; }
+
+textarea,
+input[type="email"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="url"], input[type="color"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="month"], input[type="time"], input[type="week"],
+select[multiple=multiple] {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: border-color;
+  -moz-transition: border-color;
+  transition: border-color;
+  background-color: white;
+  border-radius: 3px;
+  border: 1px solid #DDD;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06);
+  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-size: 1em;
+  margin-bottom: 0.75em;
+  padding: 0.5em 0.5em;
+  width: 100%; }
+  textarea:hover,
+  input[type="email"]:hover, input[type="number"]:hover, input[type="password"]:hover, input[type="search"]:hover, input[type="tel"]:hover, input[type="text"]:hover, input[type="url"]:hover, input[type="color"]:hover, input[type="date"]:hover, input[type="datetime"]:hover, input[type="datetime-local"]:hover, input[type="month"]:hover, input[type="time"]:hover, input[type="week"]:hover,
+  select[multiple=multiple]:hover {
+    border-color: #c4c4c4; }
+  textarea:focus,
+  input[type="email"]:focus, input[type="number"]:focus, input[type="password"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="text"]:focus, input[type="url"]:focus, input[type="color"]:focus, input[type="date"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="month"]:focus, input[type="time"]:focus, input[type="week"]:focus,
+  select[multiple=multiple]:focus {
+    border-color: #477DCA;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06), 0 0 5px rgba(55, 112, 192, 0.7);
+    outline: none; }
+
+textarea {
+  resize: vertical; }
+
+input[type="search"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none; }
+
+input[type="checkbox"],
+input[type="radio"] {
+  display: inline;
+  margin-right: 0.375em; }
+
+input[type="file"] {
+  padding-bottom: 0.75em;
+  width: 100%; }
+
+select {
+  margin-bottom: 1.5em;
+  max-width: 100%;
+  width: auto; }
+
+table {
+  border-collapse: collapse;
+  margin: 0.75em 0;
+  table-layout: fixed;
+  width: 100%; }
+
+th {
+  border-bottom: 1px solid #b7b7b7;
+  font-weight: bold;
+  padding: 0.75em 0;
+  text-align: left; }
+
+td {
+  border-bottom: 1px solid #DDD;
+  padding: 0.75em 0; }
+
+tr,
+td,
+th {
+  vertical-align: middle; }
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style-type: none; }
+dl {
+  margin-bottom: 0.75em; }
+  dl dt {
+    font-weight: bold;
+    margin-top: 0.75em; }
+  dl dd {
+    margin: 0; }
+
+button,
+input[type="submit"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  border: none;
+  cursor: pointer;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap; }
+
+html {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  overflow: scroll; }
+
+body {
+  background: grey;
+  background-size: cover;
+  margin: 0;
+  padding: 0; }
+
+html, body {
+  max-width: 100%;
+  max-height: 100%;
+  width: 100%;
+  height: auto; }
+
+.page-container {
+  background-attachment: fixed;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  max-height: 100%;
+  position: relative;
+  padding: 0;
+  margin: 0;
+  background-repeat: no-repeat; }
+
+.pt-perspective {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  perspective: 1200px;
+  transform-style: preserve-3d; }
+
+.pt-page {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+  overflow: hidden;
+  backface-visibility: hidden;
+  transform: translate3d(0, 0, 0); }
+
+.pt-page-current,
+.no-js .pt-page {
+  visibility: visible; }
+
+.no-js body {
+  overflow: scroll; }
+
+.pt-page-ontop {
+  z-index: 999; }
+
+.nav {
+  position: absolute; }
+  .nav ul {
+    list-style: none; }
+    .nav ul li {
+      list-style: none; }
+
+#cube-menu {
+  width: 35%;
+  height: auto;
+  list-style: none;
+  margin: 0;
+  margin-top: 8%;
+  margin-left: 15%; }
+  @media screen and (max-width: 1400px) {
+    #cube-menu {
+      width: 45%; } }
+  @media screen and (max-width: 1000px) {
+    #cube-menu {
+      width: 50%; } }
+  #cube-menu .cube-menu-li {
+    background: #1E8BC3;
+    color: white;
+    padding: 20%;
+    border-radius: 5px;
+    box-shadow: inset -2px 2px 15px rgba(0, 0, 0, 0.75); }
+    #cube-menu .cube-menu-li .menu ul li a {
+      color: white; }
+  #cube-menu ul {
+    padding: 0;
+    text-shadow: 0 1px 0 black; }
+    #cube-menu ul li {
+      font-size: 18px; }
+
+.inv-bttn {
+  background: url("http://fywave.com/wp-content/themes/fywave/images/png/phrase-background.png");
+  background-size: cover; }
+
+#nextpage, #prevpage {
+  display: none; }
+
+.design-read-more-bttn {
+  background: #1E8BC3;
+  font-family: "Nothing You Could Do";
+  margin-left: 5%;
+  margin-top: 5%;
+  margin-left: 15%;
+  margin-bottom: 5%; }
+  @media screen and (max-width: 800px) {
+    .design-read-more-bttn {
+      margin: 0 auto;
+      display: block;
+      margin-bottom: 5%;
+      margin-top: 5%; } }
+
+.read-more-bttn {
+  background: #1E8BC3;
+  font-family: "Nothing You Could Do";
+  margin-left: 5%;
+  margin-top: 5%;
+  margin: 0 auto;
+  display: block;
+  position: absolute;
+  top: 0; }
+  @media screen and (max-width: 500px) {
+    .read-more-bttn {
+      width: 90%;
+      font-size: 12px; } }
+
+.read-more-bttn-alt {
+  background: white;
+  color: black;
+  font-family: "Nothing You Could Do";
+  margin-bottom: 2%;
+  margin-top: 2%;
+  margin: 0 auto;
+  display: block;
+  margin-bottom: 5%; }
+
+.main-paragraph {
+  text-align: center;
+  font-family: "Lato";
+  font-size: 18px;
+  color: white;
+  padding: 3%; }
+  @media screen and (max-width: 750px) {
+    .main-paragraph {
+      font-size: 16px; } }
+
+#slide-1 {
+  background: url("http://fywave.com/wp-content/themes/fywave/images/png/background.png");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  width: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  height: 1000px;
+  background-attachment: fixed; }
+
+.home-header {
+  margin-top: 3%; }
+  @media screen and (max-width: 750px) {
+    .home-header {
+      margin-top: 35%; } }
+
+.develop-header {
+  margin-top: 3%; }
+  @media screen and (max-width: 750px) {
+    .develop-header {
+      margin-top: 35%; } }
+
+.market-header {
+  margin-top: 3%; }
+  @media screen and (max-width: 750px) {
+    .market-header {
+      margin-top: 35%; } }
+  .market-header h1 {
+    color: black; }
+
+.about-header {
+  margin-top: 3%; }
+  @media screen and (max-width: 750px) {
+    .about-header {
+      margin-top: 35%; } }
+
+.contact-header {
+  margin-top: 3%; }
+  @media screen and (max-width: 750px) {
+    .contact-header {
+      margin-top: 35%; } }
+  .contact-header h1 {
+    color: white; }
+
+.social-icons {
+  position: absolute;
+  width: 100%;
+  height: 0;
+  z-index: 10;
+  padding-right: 3%; }
+  .social-icons ul {
+    width: 7%;
+    list-style: none;
+    border-radius: 5px;
+    padding: 0;
+    float: right;
+    margin: 0;
+    margin-top: 2%; }
+    @media screen and (max-width: 750px) {
+      .social-icons ul {
+        width: 100%;
+        float: right;
+        margin: 0 auto;
+        display: flex;
+        display: -webkit-flex;
+        display: -moz-flex;
+        padding-left: 35%; } }
+    @media screen and (max-width: 450px) {
+      .social-icons ul {
+        padding-left: 25%; } }
+  .social-icons li {
+    text-align: center; }
+    .social-icons li img {
+      width: 100%;
+      height: auto; }
+      @media screen and (max-width: 450px) {
+        .social-icons li img {
+          width: 75%; } }
+
+.home-slogan {
+  font-family: "Nothing You Could Do";
+  font-size: 2em;
+  padding-top: 3%;
+  text-align: center;
+  position: relative;
+  color: #f7941d;
+  text-shadow: 1px 1px 1px black; }
+  @media screen and (max-width: 1000px) {
+    .home-slogan {
+      font-size: 1.5em; } }
+  .home-slogan a {
+    color: white;
+    font-family: "Lato";
+    font-size: 1.3em; }
+    @media screen and (max-width: 1000px) {
+      .home-slogan a {
+        font-size: 1em; } }
+    @media screen and (max-width: 750px) {
+      .home-slogan a {
+        font-size: .8em; } }
+
+.home-phrase {
+  margin-top: 10%;
+  background: url("http://fywave.com/wp-content/themes/fywave/images/png/phrase-background.png");
+  background-size: cover;
+  padding-top: 3%;
+  padding-bottom: 3%;
+  font-family: "abel"; }
+
+.home-phrase-h1 {
+  word-spacing: 75px;
+  font-family: 'lato' !important;
+  font-weight: 300;
+  display: flex;
+  display: -webkit-flex; }
+  @media screen and (max-width: 750px) {
+    .home-phrase-h1 {
+      display: inline-block; } }
+  .home-phrase-h1 span {
+    font-family: lato;
+    font-size: 1em;
+    float: left; }
+    @media screen and (max-width: 1000px) {
+      .home-phrase-h1 span {
+        font-size: .7em; } }
+    @media screen and (max-width: 750px) {
+      .home-phrase-h1 span {
+        font-size: 1em; } }
+    @media screen and (max-width: 550px) {
+      .home-phrase-h1 span {
+        margin-bottom: 4%; } }
+  .home-phrase-h1 span:nth-child(1) {
+    color: #6dcff6; }
+  .home-phrase-h1 span:nth-child(2) {
+    color: #f7941d; }
+  .home-phrase-h1 span:nth-child(3) {
+    color: #fffab9; }
+
+.phone-number {
+  font-family: "Nothing You Could Do";
+  text-align: center;
+  position: relative;
+  font-size: 24px; }
+
+#slide-2 {
+  background: url("http://fywave.com/wp-content/themes/fywave/images/png/design-background.png");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  width: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  height: 1000px;
+  background-attachment: fixed; }
+
+.design-header {
+  margin-top: 3%; }
+  @media screen and (max-width: 750px) {
+    .design-header {
+      margin-top: 35%; } }
+  .design-header h1 {
+    color: black;
+    text-align: left !important;
+    margin-left: 15% !important;
+    width: 75% !important; }
+    @media screen and (max-width: 800px) {
+      .design-header h1 {
+        text-align: center !important; } }
+  .design-header h2 {
+    color: #1E8BC3;
+    text-align: left !important;
+    margin-left: 15% !important;
+    width: 75% !important;
+    margin-top: 3%;
+    font-family: 'nothing you could do'; }
+    @media screen and (max-width: 800px) {
+      .design-header h2 {
+        text-align: center !important;
+        font-size: 1em; } }
+
+.design-p {
+  color: black;
+  width: 50%;
+  padding-left: 15%;
+  padding-top: 3%;
+  font-family: "Lato";
+  font-size: 18px; }
+  @media screen and (max-width: 800px) {
+    .design-p {
+      text-align: center !important;
+      padding-left: 0;
+      margin: 0 auto;
+      width: 75%; } }
+
+.develop-p, .landing-p {
+  width: 60%;
+  display: block;
+  margin: 0 auto;
+  margin-top: 2%; }
+
+#brand-info {
+  width: 85%;
+  margin: 0 auto; }
+
+.brand-icons td {
+  padding: 10% 10% 3% 10%; }
+
+.icon-headings td {
+  color: black;
+  font-size: 18px;
+  text-align: center; }
+  @media screen and (max-width: 750px) {
+    .icon-headings td {
+      font-size: 12px; } }
+  .icon-headings td h2 {
+    font-family: "Nothing You Could Do"; }
+
+.brand-heading strong {
+  color: #1E8BC3; }
+
+.brand-paragraphs td {
+  padding: 0;
+  vertical-align: baseline; }
+  .brand-paragraphs td p {
+    color: black; }
+.brand-paragraphs td:nth-child(2) {
+  border-right: 1px solid #DDD;
+  border-left: 1px solid #DDD; }
+
+.brand-icons > td > img {
+  -webkit-transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out; }
+  .brand-icons > td > img:hover {
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transform: scale(1.2); }
+
+#contact-form {
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 5%;
+  border: 1px solid white;
+  padding: 2%;
+  border-radius: 1%;
+  margin-bottom: 5%; }
+  @media screen and (max-width: 750px) {
+    #contact-form {
+      width: 75%; } }
+  #contact-form table {
+    border-collapse: collapse;
+    margin: 0;
+    table-layout: fixed;
+    width: 100%;
+    border: none; }
+    #contact-form table tbody {
+      text-align: center;
+      margin: 0 auto; }
+      #contact-form table tbody tr {
+        text-align: center;
+        margin: 0 auto; }
+        #contact-form table tbody tr td {
+          margin: 0 auto;
+          display: block;
+          border: none; }
+          #contact-form table tbody tr td input, #contact-form table tbody tr td textarea {
+            width: 75%;
+            margin: 0 auto;
+            margin-top: 2%; }
+      #contact-form table tbody .contact-radio td {
+        display: inline-block;
+        padding: 2%; }
+        @media screen and (max-width: 950px) {
+          #contact-form table tbody .contact-radio td {
+            display: block; } }
+  #contact-form .contact-submit {
+    margin: 0 auto;
+    display: block;
+    background: #f7941d;
+    color: white;
+    font-family: "Nothing You Could Do";
+    border: 1px solid black;
+    font-size: 24px;
+    width: 20%;
+    margin-top: 3%; }
+    @media screen and (max-width: 950px) {
+      #contact-form .contact-submit {
+        width: 50%; } }
+    #contact-form .contact-submit:hover {
+      background: white;
+      color: #1E8BC3;
+      font-family: "abel"; }
+
+/**********Landing Page**********/
+body.page-id-10 {
+  background: url("images/png/design-more.png");
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100%;
+  height: auto; }
+
+.landing-h1 {
+  font-family: "abel";
+  text-align: center;
+  font-size: 6em;
+  padding-top: 5%;
+  padding-bottom: 3%; }
+  @media screen and (max-width: 1250px) {
+    .landing-h1 {
+      font-size: 5em; } }
+  @media screen and (max-width: 1000px) {
+    .landing-h1 {
+      font-size: 4em; } }
+  @media screen and (max-width: 850px) {
+    .landing-h1 {
+      font-size: 3em; } }
+  @media screen and (max-width: 750px) {
+    .landing-h1 {
+      padding-top: 30%; } }
+
+.landing-p {
+  text-align: center;
+  border-right: 1px groove white;
+  border-left: 1px groove white;
+  padding: 2%; }
+
+.keyword-read-more-bttn, .planning-read-more-bttn, .mobile-read-more-bttn {
+  background: #1E8BC3;
+  font-family: "Nothing You Could Do";
+  margin-left: 5%;
+  margin-top: 5%;
+  margin: 0 auto;
+  display: block;
+  margin-bottom: 5%; }
+  @media screen and (max-width: 500px) {
+    .keyword-read-more-bttn, .planning-read-more-bttn, .mobile-read-more-bttn {
+      width: 90%;
+      font-size: 12px; } }
+
+/**********Portfolio Page**********/
+.portfolio {
+  height: 100%;
+  width: 75%;
+  max-height: 100%;
+  max-width: 100%;
+  position: relative;
+  margin: 30px auto; }
+  .portfolio article {
+    width: 50%;
+    height: 220px;
+    background: #fff;
+    cursor: pointer;
+    float: left;
+    border: 10px solid #fff;
+    text-align: left;
+    text-transform: none;
+    z-index: 1;
+    box-shadow: 0px 0px 0px 10px white, 1px 1px 3px 10px rgba(0, 0, 0, 0.2);
+    transition: opacity 0.4s linear,  transform 0.4s ease-in-out,  box-shadow 0.4s ease-in-out; }
+    .portfolio article:nth-child(1) {
+      background: url("http://localhost:8888/Fywave-V2/wp-content/themes/fywave/images/png/background-copy.png");
+      background-size: cover;
+      background-position: center center; }
+    .portfolio article.active {
+      transform: scale(1.05);
+      box-shadow: 0px 0px 0px 10px white, 1px 11px 15px 10px rgba(0, 0, 0, 0.4);
+      z-index: 100;
+      opacity: 1; }
+    .portfolio article p {
+      font-family: Verdana, sans-serif;
+      font-size: 10px;
+      line-height: 13px;
+      color: #333333;
+      text-shadow: 0px 0px 0px #333333;
+      opacity: 0.8;
+      transition: opacity 0.2s linear,  text-shadow 0.5s ease-in-out,  color 0.5s ease-in-out; }
+    .portfolio article.blur {
+      box-shadow: 0px 0px 20px 10px white;
+      transform: scale(0.9);
+      opacity: 0.7; }
+      .portfolio article.blur p {
+        text-shadow: 0px 0px 10px rgba(51, 51, 51, 0.9);
+        color: rgba(51, 51, 51, 0);
+        opacity: 0.5; }
+        .portfolio article.blur p.active {
+          opacity: 1; }
+
+.portfolio:before,
+.portfolio:after {
+  content: "";
+  display: table; }
+
+.portfolio:after {
+  clear: both; }
+
+/*# sourceMappingURL=style.css.map */

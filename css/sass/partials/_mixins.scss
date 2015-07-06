@@ -1,0 +1,33 @@
+@import 'variables';
+
+@mixin read-more-bttn
+{
+    background: $bttn-color;
+    font-family: $sloganfont;
+    margin-left: 5%;
+    margin-top: 5%;
+}
+
+@mixin read-more-bttn-alt
+{
+    background: white;
+    color: black;
+    font-family: $sloganfont;
+    margin-bottom: 2%;
+    margin-top: 2%;
+}
+
+@mixin paragraphs
+{
+    text-align: center;
+    font-family: $paragraph-font;
+    font-size: 18px;
+    color: white;
+    padding: 3%;
+}
+
+@mixin portfolio-articles
+{
+    background-size: cover;
+    background-position: center center;
+}
